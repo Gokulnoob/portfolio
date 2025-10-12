@@ -253,14 +253,13 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/portfolio/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Gokulnoob/portfolio/issues).
 
 ## 📬 Contact
 
-- **Website**: [gokulg.dev](https://gokulg.dev)
-- **Email**: hello@gokulg.dev
-- **LinkedIn**: [linkedin.com/in/gokul-g](https://linkedin.com/in/gokul-g)
-- **GitHub**: [github.com/gokulg](https://github.com/gokulg)
+- **Email**: massgokul592@gmail.com
+- **LinkedIn**: [linkedin.com/in/gokul-g](https://linkedin.com/in/gokul-mca)
+- **GitHub**: [github.com/gokulg](https://github.com/Gokulnoob)
 
 ---
 
