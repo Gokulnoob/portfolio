@@ -142,15 +142,15 @@ export async function POST(request: NextRequest) {
     try {
       // Send email to you (portfolio owner)
       await resend.emails.send({
-        from: 'Portfolio Contact <onboarding@resend.dev>', // Resend's verified domain
-        to: ['massgokul592@gmail.com'], // Your email
+        from: "Portfolio Contact <onboarding@resend.dev>", // Resend's verified domain
+        to: ["massgokul592@gmail.com"], // Your email
         subject: `New Portfolio Contact from ${name}`,
         html: `
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${message.replace(/\n/g, "<br>")}</p>
           <hr>
           <p><small>Submitted on ${new Date().toLocaleString()}</small></p>
         `,
@@ -158,9 +158,9 @@ export async function POST(request: NextRequest) {
 
       // Send auto-response to the person who contacted you
       await resend.emails.send({
-        from: 'Gokul G <onboarding@resend.dev>', // Resend's verified domain
+        from: "Gokul G <onboarding@resend.dev>", // Resend's verified domain
         to: [email],
-        subject: 'Thanks for reaching out!',
+        subject: "Thanks for reaching out!",
         html: `
           <h2>Hi ${name},</h2>
           <p>Thank you for contacting me through my portfolio! I've received your message and will get back to you within 24 hours.</p>
