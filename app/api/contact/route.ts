@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { Resend } from "resend";
 
 // Email validation regex
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -135,14 +136,46 @@ export async function POST(request: NextRequest) {
 
     console.log("[CONTACT SUBMISSION]", submission);
 
-    // TODO: In production, you would:
-    // 1. Save to database
-    // 2. Send email notification (using services like SendGrid, Nodemailer, etc.)
-    // 3. Send auto-response to user
-    // 4. Add to CRM or contact management system
+    // Initialize Resend with API key from environment variables
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Simulate email sending delay
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    try {
+      // Send email to you (portfolio owner)
+      await resend.emails.send({
+        from: 'Portfolio Contact <onboarding@resend.dev>', // Resend's verified domain
+        to: ['massgokul592@gmail.com'], // Your email
+        subject: `New Portfolio Contact from ${name}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message.replace(/\n/g, '<br>')}</p>
+          <hr>
+          <p><small>Submitted on ${new Date().toLocaleString()}</small></p>
+        `,
+      });
+
+      // Send auto-response to the person who contacted you
+      await resend.emails.send({
+        from: 'Gokul G <onboarding@resend.dev>', // Resend's verified domain
+        to: [email],
+        subject: 'Thanks for reaching out!',
+        html: `
+          <h2>Hi ${name},</h2>
+          <p>Thank you for contacting me through my portfolio! I've received your message and will get back to you within 24 hours.</p>
+          <p><strong>Your message:</strong></p>
+          <p><em>"${message}"</em></p>
+          <br>
+          <p>Best regards,<br>Gokul G</p>
+          <p><small>Frontend Developer & AI/ML Enthusiast</small></p>
+        `,
+      });
+    } catch (emailError) {
+      console.error("[EMAIL ERROR]", emailError);
+      // Continue with the form submission even if email fails
+      // This ensures the user still gets a success response
+    }
 
     // Check if this is a form submission expecting redirect vs API call
     const contentType = request.headers.get("content-type");
