@@ -10,10 +10,10 @@ const resumeData = {
     name: "Gokul G",
     title: "Frontend Developer & AI/ML Enthusiast",
     location: "Tamil Nadu, India",
-    email: "hello@gokulg.dev",
-    linkedin: "linkedin.com/in/gokul-g",
-    github: "github.com/gokulg",
-    phone: "+91 XXX XXX XXXX",
+    email: "massgokul592@gmail.com",
+    linkedin: "https://www.linkedin.com/in/gokul-mca",
+    github: "https://github.com/Gokulnoob",
+    phone: "+91 962 665 2697",
   },
   summary:
     "Recent MCA graduate with expertise in React, Flutter, Python, and AI/ML integrations. 6-week AICTE-approved AI/ML internship experience at Edunet Foundation. Built 5+ projects including mobile apps and ML models with R² scores up to 0.90. Passionate about creating responsive, accessible, and innovative tech solutions.",
@@ -36,14 +36,14 @@ const resumeData = {
   education: [
     {
       degree: "Master of Computer Applications (MCA)",
-      institution: "Your University Name",
-      duration: "2023 - 2025",
+      institution: "Periyar University",
+      duration: "2024 - 2026",
       highlights: ["Specialized in Software Development and AI/ML"],
     },
     {
-      degree: "Bachelor of Science - Computer Science",
-      institution: "Your College Name",
-      duration: "2020 - 2023",
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "Sacred Heart College",
+      duration: "2021 - 2024",
       highlights: ["Foundation in Programming and Computer Science"],
     },
   ],
@@ -112,7 +112,7 @@ export default function ResumePage() {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
           <motion.a
             className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-emerald-400 hover:scale-105 shadow-lg"
-            href="/resume/gokul_resume.pdf"
+            href="/resume/gokul_Resume.pdf"
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -398,14 +398,14 @@ export default function ResumePage() {
               <div className="flex flex-wrap gap-3">
                 <a
                   className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-emerald-400"
-                  href="/resume/gokul_resume.pdf"
+                  href="/resume/gokul_Resume.pdf"
                   download
                 >
                   📥 Download PDF
                 </a>
                 <a
                   className="inline-flex items-center gap-2 rounded-full border border-slate-600 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-slate-800"
-                  href="/resume/gokul_resume.pdf"
+                  href="/resume/gokul_Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
