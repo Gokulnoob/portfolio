@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#gradient1)"/>
+  
+  <!-- Laptop -->
+  <rect x="80" y="120" width="240" height="140" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <rect x="85" y="125" width="230" height="125" rx="8" fill="#0f172a"/>
+  
+  <!-- Screen content - code lines -->
+  <rect x="95" y="140" width="60" height="4" rx="2" fill="#10b981"/>
+  <rect x="95" y="150" width="120" height="4" rx="2" fill="#3b82f6"/>
+  <rect x="105" y="160" width="90" height="4" rx="2" fill="#f59e0b"/>
+  <rect x="95" y="170" width="150" height="4" rx="2" fill="#ef4444"/>
+  <rect x="105" y="180" width="100" height="4" rx="2" fill="#8b5cf6"/>
+  <rect x="95" y="190" width="80" height="4" rx="2" fill="#06b6d4"/>
+  <rect x="115" y="200" width="70" height="4" rx="2" fill="#84cc16"/>
+  <rect x="95" y="210" width="110" height="4" rx="2" fill="#f97316"/>
+  
+  <!-- Laptop base -->
+  <ellipse cx="200" cy="260" rx="130" ry="8" fill="#1e293b"/>
+  
+  <!-- Floating elements -->
+  <circle cx="320" cy="80" r="20" fill="#10b981" opacity="0.2"/>
+  <circle cx="60" cy="100" r="15" fill="#3b82f6" opacity="0.2"/>
+  <rect x="330" y="180" width="30" height="30" rx="6" fill="#f59e0b" opacity="0.2"/>
+  <rect x="40" y="200" width="25" height="25" rx="5" fill="#ef4444" opacity="0.2"/>
+  
+  <!-- Code brackets -->
+  <path d="M350 40 L340 50 L350 60" stroke="#10b981" stroke-width="3" fill="none" opacity="0.6"/>
+  <path d="M30 50 L40 40 L30 30" stroke="#3b82f6" stroke-width="3" fill="none" opacity="0.6"/>
+  
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
